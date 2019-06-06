@@ -1,11 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const TopicDetail = (props) =>{
+const TopicDetail = ({ match }) =>{
+
+  console.log(match)
   return (
     <div>
       <h3>
-      TopicDetail
+        {match.params.topicId}
       </h3>
+      <ul>
+        <li>
+          <Link to='/Topics'>
+            Back to Topics
+          </Link>
+        </li>
+      </ul>
     </div>
   )
 }
